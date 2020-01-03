@@ -1,11 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
-export default function Expenses() {
+export default function Expenses({ navigation }) {
   return (
-    <View />
+    <Container>
+      <TouchableOpacity onPress={() => navigation.navigate('AddExpenses')}>
+        <Text>Abrir</Text>
+      </TouchableOpacity>
+    </Container>
   );
 }
 
